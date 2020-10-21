@@ -10,14 +10,14 @@ namespace GenericsCreation1
     {
         static void Main(string[] args)
         {
-            Repository<Bubbelgum> bubbelRepo = new Repository<Bubbelgum>();
-
             Bubbelgum bubblegum = new Bubbelgum();
             bubblegum.flavour = "Jenka";
 
-            bubbelRepo.SaveToRepo(bubblegum);
+            Repository<Bubbelgum> bubbelRepo = new Repository<Bubbelgum>();
 
+            bubbelRepo.SaveToRepo(bubblegum);
             Bubbelgum bubbelgum = bubbelRepo.GetItemFromDataBase(0);
+
 
             Bil bil = new Bil();
             bil.Model = "Seat";
